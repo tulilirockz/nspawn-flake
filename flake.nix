@@ -41,10 +41,6 @@
           '';
         };
 
-        ${pname}-unwrapped = ${pname}.overrideAttrs (finalAttrs: oldAttrs: { buildPhase = ''mkdir -p $out/bin && cp $src/${pname} $out/bin'' })
-      });
-
-
       schemas = flake-schemas.schemas;
 
       formatter = forEachSupportedSystem ({ pkgs, system, ... }: {
