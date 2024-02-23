@@ -1,0 +1,13 @@
+diff --git a/nspawn b/nspawn
+index f55b8b5..8bcfaf9 100755
+--- a/nspawn
++++ b/nspawn
+@@ -61,7 +61,7 @@ version() {
+ }
+ 
+ helpout() {
+-  local program="${0##*/}"
++  local program="nspawn"
+   echo "Menu usage for $STATIC_NAME $VERSION"
+   echo
+   echo "$program {COMMAND} [PARAMETER]"
