@@ -18,7 +18,7 @@
     in {
 
       packages = forEachSupportedSystem ({pkgs,...}: {
-        default = pname;
+        default = self.packages.${pkgs.system}.${pname};
 
         ${pname} = pkgs.stdenvNoCC.mkDerivation {
           name = pname;
@@ -50,5 +50,6 @@
           ];
         };
       });
-    };
+    });
+  };
 }
